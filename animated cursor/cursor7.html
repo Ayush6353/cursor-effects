@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Cursor Effects</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="cursor7.css"> 
+</head>
+<body>
+    <div style="display: flex; justify-content: center; align-items: center;height: 100vh;cursor: default;">
+        <a style="user-select: none;font-size: 100px;color: azure;text-shadow: 1px 1px 18px rgb(206, 240, 11);">Click Cursor Effects</a>
+    </div>
+  <script>
+    document.addEventListener('mousemove', function(e) {
+        let body = document.querySelector('body');
+        let star = document.createElement('span');
+
+        let size = Math.random() * 40;
+        let transformValue = Math.random() * 360;
+
+        star.style.left = e.offsetX + 'px';
+        star.style.top = e.offsetY + 'px';
+        star.style.fontSize = 10 + size + 'px';
+        star.style.transform = 'rotate('+ transformValue +'deg)'
+
+        body.appendChild(star);
+
+        setTimeout(function(){
+            star.remove();
+        }, 1000);
+    })
+  </script> 
+</body>
+</html>
+    

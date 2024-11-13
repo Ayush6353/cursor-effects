@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Buttons with Links</title>
+    <style>
+        /* Style the grid container */
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 10px; /* space between buttons */
+            padding: 20px;
+            max-width: 90%;
+            margin: auto;
+            height: 100vh;
+        }
+        
+        /* Style links to display only images */
+        .button-grid a {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            justify-content: center;
+            background-color: #030303; /* button color */
+            border-radius: 10px;
+            height: 350px;
+            overflow: hidden;
+            }
+        
+        /* Set images to fit within the button */
+        .button-grid a img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Hover effect */
+        .button-grid a:hover {
+            background-color: #a006f8;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-grid">
+        <a href="cursor1.html">
+            <img src="img/cursor1.png" alt="1 Image">
+        </a>
+        <a href="cursor2.html">
+            <img src="img/cursor2.png" alt="2 Image">
+        </a>
+        <a href="cursor3.html">
+            <img src="img/cursor3.png" alt="3 Image">
+        </a>
+        <a href="cursor4.html">
+            <img src="img/cursor4.png" alt="4 Image">
+        </a>
+        <a href="cursor5.html">
+            <img src="img/cursor5.png" alt="5 Image">
+        </a>
+        <a href="cursor6.html">
+            <img src="img/cursor6.png" alt="6 Image">
+        </a>
+        <a href="cursor7.html">
+            <img src="img/cursor7.png" alt="7 Image">
+        </a>
+        <a href="cursor8.html">
+            <img src="img/cursor8.png" alt="8 Image">
+        </a>
+        <a href="cursor9.htm">
+            <img src="img/cursor9.png" alt="9 Image">
+        </a>
+    </div>
+</body>
+</html>

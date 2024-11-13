@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Cursor Effects</title>
+  <link rel="stylesheet" href="cursor5.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <div style="display: flex; justify-content: center; align-items: center;height: 100vh;cursor: default;">
+        <a style="user-select: none;font-size: 100px;color: azure;text-shadow: 1px 1px 18px rgb(11, 137, 240);">Click Cursor Effects</a>
+    </div>
+  <script>
+  function spark(event) {
+    let i = document.createElement("i");
+    i.style.left = (event.pageX) + 'px';
+    i.style.top = (event.pageY) + 'px';
+    i.style.scale = `${Math.random() * 2 + 1}`;
+    i.style.setProperty('--x',getRandomTransitionValue());
+    i.style.setProperty('--y',getRandomTransitionValue());
+
+    document.body.appendChild(i);
+
+    setTimeout(() => {
+        document.body.removeChild(i);
+    }, 2000);
+  }
+
+  function getRandomTransitionValue(){
+    return `${Math.random() * 400 - 200}px`;
+  }
+
+  document.addEventListener('mousemove', spark);
+  </script> 
+</body>
+</html>
+    
